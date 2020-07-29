@@ -1,0 +1,33 @@
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  &-block {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    &__desc {
+      max-width: 180px;
+      margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    justify-content: space-evenly;
+    &-block {
+      margin: 0;
+      margin-bottom: 35px;
+      border-radius: 15px;
+      box-shadow: 5px 4px 4px rgba(150, 150, 150, 0.25);
+      padding: 15px;
+      &__desc {
+        max-width: 110px;
+        margin-top: 8px;
+      }
+    }
+  }
+}

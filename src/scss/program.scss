@@ -1,0 +1,245 @@
+.program {
+  margin: 50px auto;
+  margin-top: 110px;
+
+  &-wrap {
+    background: $color-white;
+    border-radius: 20px;
+    padding: 37px;
+    box-shadow: $box-shadow;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  &-licence {
+    text-align: center;
+    font-size: 16px;
+    color: $text-color;
+    margin-top: 20px;
+    p {
+      margin: 5px;
+    }
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 5px;
+  }
+  &-logo {
+    width: 58px;
+    height: 58px;
+    margin-right: 17px;
+    transition: 0.3s;
+    img {
+      width: 58px;
+      height: 58px;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  &-like {
+    box-shadow: 3px 4px 6px rgba(33, 150, 243, 0.19);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 37px;
+    font-size: 16px;
+    background: $color-white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &__img {
+      transition: 0.2s;
+      margin-right: 3px;
+      width: 40px;
+      height: 25px;
+      fill: $main-color;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &__img.active {
+      fill: $color-white;
+    }
+    span {
+      user-select: none;
+      margin-top: 3px;
+    }
+  }
+  &-like.active {
+    background: $main-color;
+    color: $color-white;
+  }
+  &-main {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  tbody {
+    display: table-row-group;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: $text-color;
+    margin-top: 45px;
+  }
+  tr {
+    display: table-row;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  th,
+  td {
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  &-description {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    &__text {
+      position: relative;
+      transition: 0.7s;
+      max-height: 150px;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    &__text.active {
+      max-height: 500px;
+    }
+    &__blur {
+      position: absolute;
+      transition: 0.7s;
+      top: 13px;
+      left: -120px;
+    }
+    &__blur.active {
+      top: 100%;
+    }
+    &__button {
+      margin-top: 5px;
+      outline: none;
+      transition: 0.4s;
+      border: none;
+      color: $text-color;
+      background: $color-white;
+      width: 130px;
+      height: 35px;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(100, 101, 109, 0.15);
+      border-radius: 5px;
+      span {
+        margin-right: 6px;
+      }
+      img {
+        margin-top: 3px;
+        transition: 0.4s;
+      }
+      img.active {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        background: rgb(241, 241, 241);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .program {
+    margin: 0;
+    &-main {
+      margin: 0;
+      justify-content: center;
+    }
+    &-wrap {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+    &-info {
+      display: none;
+    }
+
+    &-like {
+      position: absolute;
+      left: calc(50% - 45px);
+      top: 375px;
+      &__img {
+        width: 22px;
+        height: 22px;
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+    &-description {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: center;
+      &__text {
+        text-align: left;
+        color: $text-color;
+      }
+      &__text.active {
+        max-height: 2000px;
+      }
+      &__button {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        &:hover {
+          background: $color-white;
+        }
+      }
+    }
+    table {
+      border-collapse: separate;
+      empty-cells: hide;
+      color: $text-color;
+      font-size: 14px;
+      border: 3px solid rgba(33, 150, 243, 0.15);
+      border-radius: 10px;
+      width: 100%;
+      height: 155px;
+    }
+    th,
+    td {
+      padding-bottom: 7px;
+      padding-top: 7px;
+    }
+
+    th {
+      width: 50%;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '~normalize.css';
+@import '~animate.css';
+@import '_variables';
+@import 'header';
+@import 'search';
+@import 'advantages';
+@import 'burger';
+@import 'program';
+@import 'slider';
+@import 'tags';
+@import 'footer';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+body {
+  background: #ecf4f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: $color-white;
+    overflow-x: hidden !important;
+  }
+  .container {
+    padding: 15px;
+  }
+  .program-logo,
+  .burger-btn {
+    display: block !important;
+  }
+}
