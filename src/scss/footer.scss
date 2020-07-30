@@ -41,7 +41,7 @@
       font-size: 12px;
       flex-wrap: wrap;
       font-weight: normal;
-      color: #504e4e;
+      color: $color-white;
       font-weight: 500;
       span {
         flex-basis: 100%;
@@ -52,7 +52,7 @@
       }
     }
     &-text {
-      color: $border-color;
+      color: $color-white;
       margin-bottom: 20px;
       line-height: 16px;
     }

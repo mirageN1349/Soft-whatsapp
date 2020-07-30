@@ -1,5 +1,4 @@
 import './scss/index.scss'
-import './components/button/m-400'
 import './components/slider/slider'
 import './components/like/like.logic'
 import './components/navbar/navbar.logic'
@@ -13,12 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     blur = document.querySelector('.program-description__blur'),
     headerTitle = document.querySelector('.header-title'),
     input = document.querySelector('.header-input'),
-    hide = document.querySelectorAll('.hide')
+    hide = document.querySelectorAll('.hide'),
+    btnDownload = document.querySelector('.program-download')
 
   btnMore.addEventListener('click', btnMoreClick)
 
   if (document.documentElement.clientWidth <= 768) {
     headerTitle.textContent = 'Whatsapp'
+    btnDownload.style.display = 'none'
 
     hide.forEach(el => (el.style.display = 'none'))
 
